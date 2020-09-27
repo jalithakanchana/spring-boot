@@ -11,6 +11,7 @@ import java.util.Date;
 @Getter
 @Setter
 public class GroceryStore {
+
     @Id
     @SequenceGenerator(name="generator", sequenceName="GROCERY_STORE_SEQ",allocationSize=1)
     @GeneratedValue(generator = "generator")
@@ -20,7 +21,22 @@ public class GroceryStore {
     @Column(name = "name")
     private String name;
 
+    @Transient
+    private float mean;
 
     @Column(name = "description")
     private String description;
+
+    public Long getGroceryStoreId() {
+        return groceryStoreId;
+    }
+
+    public void setGroceryStoreId(Long groceryStoreId) {
+        this.groceryStoreId = groceryStoreId;
+    }
+
+    public float getMean() { return mean; }
+
+    public void setMean(float mean) { this.mean = mean; }
+
 }

@@ -10,4 +10,7 @@ public interface GroceryStoreService {
     List<GroceryStore> listGroceryStores();
 
     List<GroceryStore> addGroceryStore(GroceryStore groceryStore);
+
+    List<GroceryStore> analyseComments() throws Exception;
+
 }

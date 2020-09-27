@@ -32,4 +32,12 @@ public class GroceryStoreController {
         log.info("HTTP GET --> retrieveFunderTypes -->  /firebase/url");
         return ResponseEntity.ok(groceryStoreService.addGroceryStore(groceryStore));
     }
+
+    @RequestMapping(value = "/semantic/analysis", method = RequestMethod.POST)
+    public ResponseEntity<?> analyseComments() throws Exception{
+        log.info("HTTP GET --> analyse comments -->  /semantic/analysis");
+        return ResponseEntity.ok(groceryStoreService.analyseComments());
+    }
+
+
 }
